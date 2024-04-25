@@ -1,0 +1,68 @@
+.root {
+    background-color: #11284b;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(250deg, rgba(207, 195, 138, 0) 0%, #9b8854 70%),
+        url(https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1920/public/2023-04/VC_SEO_Los-Angeles-Bakeries_Chaumont-Bakery-and-Cafe_HERO_SUPPLIED_1280x640.jpg.webp?itok=vNhkmlw-);
+    padding-top: calc(var(--mantine-spacing-xl) * 3);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .inner {
+        flex-direction: column;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+
+    .title {
+        max-width: 100%;
+        font-size: 34px;
+        line-height: 1.15;
+    }
+}
+
+.content {
+    padding-top: calc(var(--mantine-spacing-xl) * 2);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+    margin-right: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.title {
+    color: #fff;
+    font-family: 'Greycliff CF', var(--mantine-font-family);
+    font-weight: 900;
+    line-height: 1.05;
+    max-width: 500px;
+    font-size: 48px;
+}
+
+.description {
+    color: #fff;
+    opacity: 0.75;
+    max-width: 500px;
+}
+
+.control {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Greycliff CF', var(--mantine-font-family);
+    font-size: 22px;
+    width: 100%;
+    /* Added width for responsiveness */
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
