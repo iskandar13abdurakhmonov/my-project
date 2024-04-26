@@ -1,7 +1,15 @@
 import { Container, Title, Text, Button } from '@mantine/core'
 import classes from './HeroImageRight.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export function HeroImageRight() {
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/login')
+  }
+
   return (
     <div className={classes.root}>
       <Container size="md">
@@ -29,6 +37,7 @@ export function HeroImageRight() {
               size="xl"
               className={classes.control}
               mt={40}
+              onClick={handleClick}
             >
               Get started
             </Button>

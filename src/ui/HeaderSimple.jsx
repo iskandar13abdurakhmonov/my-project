@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import { Container, Group, Burger, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderSimple.module.css';
+import Logout from '../features/auth/Logout';
 
 const links = [
   { link: '/about', label: 'Features' },
@@ -37,6 +38,8 @@ export function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        
+        <Logout/>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
