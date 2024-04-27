@@ -17,14 +17,8 @@ export function HeroImageRight() {
           <div className={classes.content}>
             <Title className={classes.title}>
               Beautifully{' '}
-              <Text
-                component="span"
-                inherit
-                variant="gradient"
-                gradient={{ from: 'pink', to: 'yellow' }}
-              >
+              
                 Delicious
-              </Text>{' '}
             </Title>
 
             <Text className={classes.description} mt={30}>
@@ -32,7 +26,7 @@ export function HeroImageRight() {
             </Text>
 
             <Button
-              variant="gradient"
+            color='yellow'
               gradient={{ from: 'pink', to: 'yellow' }}
               size="xl"
               className={classes.control}

@@ -34,7 +34,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <MantineLogo size={28} color='#FCC419' />
+        <img style={{ width: '100px'}} src='./logo.jpg'/>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
