@@ -7,6 +7,7 @@ export default function Logout() {
 
   return (
     <Button
+      style={{ marginTop: '20px' }}
       onClick={logout}
       disabled={isLoading}
       visibleFrom="xs"
