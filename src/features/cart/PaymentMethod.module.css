@@ -1,0 +1,11 @@
+.paymentMethod {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    width: 300px;
+    max-height: 400px;
+    list-style-type: none;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}

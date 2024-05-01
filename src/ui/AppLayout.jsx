@@ -7,7 +7,9 @@ export default function AppLayout() {
   return (
     <>
       <HeaderSimple />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <FooterLinks />
     </>
   )

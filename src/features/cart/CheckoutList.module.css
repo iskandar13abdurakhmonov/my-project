@@ -1,0 +1,11 @@
+.list {
+    padding: 5px;
+    width: 600px;
+    list-style-type: none;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.item {
+    width: 100%;
+}
