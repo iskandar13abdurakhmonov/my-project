@@ -25,11 +25,19 @@ export function CheckoutItem({ cartItem }) {
         {name}
       </Text>
       <Group>
-        <Button color="yellow" onClick={() => dispatch(decreaseQuantity(id))}>
+        <Button
+          color="yellow"
+          radius="xl"
+          onClick={() => dispatch(decreaseQuantity(id))}
+        >
           -
         </Button>
         <Text>{cartItem.quantity}</Text>
-        <Button color="yellow" onClick={() => dispatch(increaseQuantity(id))}>
+        <Button
+          color="yellow"
+          radius="xl"
+          onClick={() => dispatch(increaseQuantity(id))}
+        >
           +
         </Button>
       </Group>

@@ -1,4 +1,4 @@
-import supabase from './supabase'
+import { supabase } from './supabase'
 
 export async function login({ email, password }) {
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -33,5 +33,26 @@ export async function logout() {
 
   if (error) {
     throw new Error(error.message)
+  }
+}
+
+export async function getActiveUser() {
+  const {
+    data: { user, error },
+  } = await supabase.auth.getUser()
+
+  if (error) {
+    throw new Error(error.message)
+  } else {
+    const { data, error } = await supabase
+      .from('customers')
+      .select('*')
+      .eq('email', user.email)
+
+    if (error) {
+      throw new Error(error.message)
+    }
+
+    return data
   }
 }

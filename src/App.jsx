@@ -19,6 +19,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import ProtectedRoute from './ui/ProtectedRoute'
 import Menu from './pages/Menu'
 import Checkout from './pages/Checkout'
+import { Toaster } from 'react-hot-toast'
+import Status from './pages/Status'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,14 +46,22 @@ export default function App() {
             >
               <Route index element={<Navigate replace to="home" />} />
               <Route path="home" element={<Home />} />
-              <Route path="menu" element={<Menu/>} />
-              <Route path="checkout" element={<Checkout/>} />
+              <Route path="menu" element={<Menu />} />
+              <Route path="checkout" element={<Checkout />} />
+              <Route path="status" element={<Status />} />
             </Route>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />
           </Routes>
         </Router>
       </QueryClientProvider>
+      <Toaster
+        position="top-right"
+        gutter={8}
+        toastOptions={{
+          duration: 3000,
+        }}
+      />
     </MantineProvider>
   )
 }

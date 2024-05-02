@@ -35,6 +35,7 @@ export default function CartContent() {
                 </Group>
                 <Group>
                   <Button
+                  radius='xl'
                   color='yellow'
                     onClick={() => dispatch(decreaseQuantity(cartItem.id))}
                   >
@@ -42,6 +43,7 @@ export default function CartContent() {
                   </Button>
                   <Text>{cartItem.quantity}</Text>
                   <Button
+                  radius='xl'
                   color='yellow'
                     onClick={() => dispatch(increaseQuantity(cartItem.id))}
                   >

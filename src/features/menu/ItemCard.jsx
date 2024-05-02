@@ -8,6 +8,7 @@ import {
 import classes from './ItemCard.module.css'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../cart/cartSlice'
+import toast from 'react-hot-toast'
 
 const mockdata = [
   { label: '4 passengers', icon: IconUsers },
@@ -32,6 +33,7 @@ export function ItemCard({ item }) {
     }
 
     dispatch(addItem(newItem))
+    toast.success(newItem.name + ' added to cart')
   }
 
   const features = mockdata.map((feature) => (
