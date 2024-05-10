@@ -52,6 +52,11 @@ export default function PaymentMethod() {
   }, [])
 
   async function onSubmit() {
+    if (cart.length === 0) {
+      toast.error('Your cart is empty. Add items before placing an order')
+      return
+    }
+
     const newOrder = {
       id: latestOrderId,
       total_price: totalCartPrice,
@@ -81,7 +86,7 @@ export default function PaymentMethod() {
 
     dispatch(clearCart())
     toast.success(`Order: ${latestOrderId} placed successfully`)
-    navigate('/status')
+    navigate(`/status/${latestOrderId}`)
 
     if (orderError) {
       toast.error(orderError.message)

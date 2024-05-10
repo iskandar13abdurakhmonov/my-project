@@ -48,7 +48,7 @@ export default function App() {
               <Route path="home" element={<Home />} />
               <Route path="menu" element={<Menu />} />
               <Route path="checkout" element={<Checkout />} />
-              <Route path="status" element={<Status />} />
+              <Route path="status/:latestOrderId" element={<Status />} />
             </Route>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />

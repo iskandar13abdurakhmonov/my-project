@@ -10,7 +10,6 @@ export async function login({ email, password }) {
     throw new Error(error.message)
   }
 
-  console.log(data)
   return data
 }
 
@@ -55,4 +54,18 @@ export async function getActiveUser() {
 
     return data
   }
+}
+
+export async function getOrder(id) {
+  const { data: orders, error } = await supabase
+    .from('orders')
+    .select('*')
+    .eq('id', id)
+    .single()
+
+  if (error) {
+    throw new Error(error.message)
+  }
+
+  return orders
 }
