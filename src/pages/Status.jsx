@@ -15,7 +15,6 @@ export default function Status() {
 
   if (isLoading) return <Spinner />;
 
-  // Find the corresponding value and color for the current order status
   const currentStatus = statuses.find((item) => item.status === order.status);
   const progressValue = currentStatus ? currentStatus.value : 0;
   const progressBarColor = order.status === 'ready' ? 'green' : 'yellow';

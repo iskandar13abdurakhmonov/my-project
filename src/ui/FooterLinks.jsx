@@ -1,4 +1,4 @@
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core'
+import { Text, Container, ActionIcon, Group, rem, Image } from '@mantine/core'
 import {
   IconBrandTwitter,
   IconBrandYoutube,
@@ -62,7 +62,7 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo color='#FCC419' size={30} />
+          <Image w={100} src="./logo.png" />
           <Text size="xs" c="dimmed" className={classes.description}>
             Build fully functional accessible web applications faster than ever
           </Text>
