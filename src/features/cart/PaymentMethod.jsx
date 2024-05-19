@@ -63,7 +63,7 @@ export default function PaymentMethod() {
       status: 'unconfirmed',
       paymentMethod: selected,
       note,
-      customer_id: user.id,
+      customer_id: user?.id,
     }
 
     const newOrderItems = cart.map((cartItem) => {
